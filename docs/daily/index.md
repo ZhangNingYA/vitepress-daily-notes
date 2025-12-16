@@ -12,6 +12,7 @@ sidebar: false
   gap: 1rem;
   margin: 2rem 0;
 }
+
 .card {
   border: 1px solid var(--vp-c-bg-soft);
   background-color: var(--vp-c-bg-soft);
