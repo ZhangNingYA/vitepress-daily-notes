@@ -1,8 +1,13 @@
 import { defineConfig } from 'vitepress'
-
+import mathjax3 from 'markdown-it-mathjax3'
 export default defineConfig({
   lang: 'zh-Hans',
   title: '每日英语学习',
+  markdown: {
+    config: (md) => {
+      md.use(mathjax3)
+    }
+  },
   description: '单词句型、语法与心得的日更积累（纯静态）',
 
   // 如果是项目页（https://<user>.github.io/<repo>/），把这里改成 "/<repo>/"
