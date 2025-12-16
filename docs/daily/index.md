@@ -1,5 +1,5 @@
 ---
-title: 每日入口
+title: 每日入口~
 editLink: false
 sidebar: false
 ---
