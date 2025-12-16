@@ -12,7 +12,7 @@ export default defineConfig({
 
   // 如果是项目页（https://<user>.github.io/<repo>/），把这里改成 "/<repo>/"
   // 如果是用户/组织主页（https://<user>.github.io/），通常保持 "/"
-  base: '/',
+  base: '/vitepress-daily-notes',
 
   lastUpdated: false,
   cleanUrls: true,
