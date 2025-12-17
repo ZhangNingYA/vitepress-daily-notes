@@ -16,6 +16,10 @@ import FlashCard from './components/FlashCard.vue'
 import GrammarCard from './components/GrammarCard.vue'
 // @ts-ignore
 import GrammarPlanet from './components/GrammarPlanet.vue'
+// @ts-ignore
+import SVO_Builder from './components/SVO_Builder.vue'
+// @ts-ignore
+import Modifier_FX from './components/Modifier_FX.vue'
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }: EnhanceAppContext) {
@@ -26,5 +30,7 @@ export default {
     app.component('FlashCard', FlashCard)
     app.component('GrammarCard', GrammarCard)
     app.component('GrammarPlanet', GrammarPlanet)
+    app.component('SVOBuilder', SVO_Builder)
+    app.component('ModifierFX', Modifier_FX)
   }
 } satisfies Theme
