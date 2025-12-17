@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { withBase } from 'vitepress'
 import { data as entries, type DailyEntry, type DailyType } from '../daily.data'
 
 const byType = computed(() => {
@@ -21,7 +22,8 @@ const today = computed(() => {
 })
 
 function hrefFor(type: DailyType, dateStr: string) {
-  return `/daily/${type}/${dateStr}`
+  // return `/daily/${type}/${dateStr}`
+  return withBase(`dateStr.url`)
 }
 
 function count(type: DailyType) {

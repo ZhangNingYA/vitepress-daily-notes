@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import mathjax3 from 'markdown-it-mathjax3'
 export default defineConfig({
+  base: '/vitepress-daily-notes/',
   lang: 'zh-Hans',
   title: '每日英语学习',
   markdown: {
@@ -12,7 +13,6 @@ export default defineConfig({
 
   // 如果是项目页（https://<user>.github.io/<repo>/），把这里改成 "/<repo>/"
   // 如果是用户/组织主页（https://<user>.github.io/），通常保持 "/"
-  base: '/vitepress-daily-notes/',
 
   lastUpdated: false,
   cleanUrls: true,
@@ -32,18 +32,16 @@ export default defineConfig({
     search: { provider: 'local' },
 
     sidebar: {
-      '/daily/': [
-        {
-          text: '每日学习',
-          items: [
-            { text: '每日入口', link: '/daily/' },
-            { text: '单词积累', link: '/daily/words/' },
-            { text: '每日语法', link: '/daily/grammar/' },
-            { text: '每日心得', link: '/daily/reflection/' },
+      items: [
+            // 这是一个目录入口 (对应 /daily/index.md)
+            { text: '每日入口', link: '/daily/' }, 
+            
+            // 下面这些是具体文件 (对应 /daily/words.md)，去掉末尾斜杠
+            { text: '单词积累', link: '/daily/words' },
+            { text: '每日语法', link: '/daily/grammar' },
+            { text: '每日心得', link: '/daily/reflection' },
             { text: '归档', link: '/daily/archive' }
-          ]
-        }
-      ],
+          ],
       '/guide/': [
         {
           text: '指南',

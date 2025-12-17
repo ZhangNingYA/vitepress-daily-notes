@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { withBase } from 'vitepress'
 import { data as entries, type DailyEntry, type DailyType } from '../daily.data'
 
 const props = defineProps<{
@@ -11,7 +12,8 @@ const list = computed(() => entries.filter(e => e.type === props.type))
 
 function toDayUrl(e: DailyEntry) {
   // 统一展示为 /daily/<type>/<YYYY-MM-DD>
-  return `/daily/${props.type}/${e.date}`
+  // return `/daily/${props.type}/${e.date}`
+  return withBase(e.url)
 }
 </script>
 

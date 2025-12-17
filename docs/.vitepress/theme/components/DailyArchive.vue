@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { withBase } from 'vitepress'
 import { data as entries, type DailyEntry, type DailyType } from '../daily.data'
 
 type Row = DailyEntry & { label: string }
@@ -28,7 +29,9 @@ const grouped = computed(() => {
 })
 
 function dayUrl(e: DailyEntry) {
-  return `/daily/${e.type}/${e.date}`
+  
+  return withBase(e.url)
+
 }
 </script>
 
