@@ -14,6 +14,8 @@ import DailyArchive from './components/DailyArchive.vue'
 import FlashCard from './components/FlashCard.vue' 
 // @ts-ignore
 import GrammarCard from './components/GrammarCard.vue'
+// @ts-ignore
+import GrammarPlanet from './components/GrammarPlanet.vue'
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }: EnhanceAppContext) {
@@ -23,5 +25,6 @@ export default {
     app.component('DailyArchive', DailyArchive)
     app.component('FlashCard', FlashCard)
     app.component('GrammarCard', GrammarCard)
+    app.component('GrammarPlanet', GrammarPlanet)
   }
 } satisfies Theme

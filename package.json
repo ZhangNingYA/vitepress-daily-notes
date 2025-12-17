@@ -14,5 +14,9 @@
     "markdown-it-mathjax3": "^4.3.2",
     "tsx": "^4.19.2",
     "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "@types/three": "^0.182.0",
+    "three": "^0.182.0"
   }
 }
